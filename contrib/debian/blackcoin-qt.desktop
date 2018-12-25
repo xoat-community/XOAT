@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Xoat
+Comment=Xoat P2P Cryptocurrency
+Comment[fr]=Xoat, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Xoat, eşten eşe kriptografik sanal para birimi
+Exec=/usr/bin/xoat-qt
+Terminal=false
+Type=Application
+Icon=/usr/share/pixmaps/bitcoin80.xpm
+MimeType=x-scheme-handler/xoat;
+Categories=Office;

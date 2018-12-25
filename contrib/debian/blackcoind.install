@@ -1,0 +1,2 @@
+debian/bin/xoatd usr/bin
+src/xoatd usr/lib/xoat

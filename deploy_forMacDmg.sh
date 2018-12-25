@@ -1,0 +1,1 @@
+contrib/macdeploy/macdeployqtplus Xoat-Qt.app -add-qt-tr da,de,es,hu,ru,uk,zh_CN,zh_TW -dmg -fancy contrib/macdeploy/fancy.plist -verbose 2

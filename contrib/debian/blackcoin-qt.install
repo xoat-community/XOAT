@@ -1,0 +1,5 @@
+xoat-qt usr/bin
+share/pixmaps/bitcoin32.xpm usr/share/pixmaps
+share/pixmaps/bitcoin80.xpm usr/share/pixmaps
+debian/xoat-qt.desktop usr/share/applications
+debian/xoat-qt.protocol usr/share/kde4/services/

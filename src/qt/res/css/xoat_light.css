@@ -1,0 +1,547 @@
+/*
+ *  General interface
+ */
+
+#notificationIconsBar{
+    background:none;
+    margin-bottom: 3px;
+}
+#networkProgressBarLabel{
+    color: rgb(20,20,20);
+}
+#statusProgressBar{
+    background-color: rgb(224,224,224);
+    height: 33px; 
+}
+#mainWindow{
+    border-image: url(:/images/bkg);
+    background-color: rgb(250,250,250);
+}
+#toolBarHeader{
+    background: none;
+    margin-left: -10px;
+    margin-top:-10px;
+    border-image: url(:/images/header); 
+}
+#test{
+    background:red;
+    color:green;
+    border: 1px solid yellow;
+    border-radius:5px;
+}
+/*  
+ *  Tab Buttons in main window menu
+ *  background of tab menu list (overview, send, receive, etc).
+ */
+
+QLabel{
+    /*font-family: 'ZCOOL KuaiLe', cursive;*/
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+QToolBar { 
+    padding: 0px;
+    margin: 0px;
+    background-color: rgb(252, 252, 252) !important;
+    border: 2px solid qlineargradient(x1:0,y1:0,x2:1,y2:0, stop: 0 rgba(0,0,0,0.9) , stop: 1 rgba(0,0,0,0.3) );
+
+}
+QToolBar>QToolButton {
+    background: none;
+    border: none;
+    border-left-color: rgb(255, 255, 255);
+    border-left-style: solid;
+    border-left-width: 6px;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    /*icon-size: 48px, 48px;*/
+}
+
+QToolBar>QToolButton:checked {
+    color: rgb(134, 62, 101);
+    border: none;
+    border-left-color: rgb(245,138,16);
+    border-left-style: solid;
+    border-left-width: 5px;
+}
+
+/* 
+ *  General ComboBox 
+*/
+
+QComboBox {
+    color: rgb(72, 72, 72); 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    height: 35px !important;
+    min-width: 100px !important;
+    border-radius: 8px;
+    border: 0px solid gray;
+    background-color:white;
+}/*selected item text color*/
+QComboBox::drop-down{
+    border: 0px !important;
+}
+QComboBox::down-arrow{
+    image: url(:/icons/downarrow);
+    width:28px !important;
+    height:28px !important;
+    border: 0px solid rgba(0,0,0,0) !important;
+    margin-right:8px !important;
+}
+QComboBox QAbstractItemView::item {
+    color: rgb(20, 20, 20);
+    selection-background-color: rgb(245,138,16);
+    height: 35px !important;
+    min-width: 100px !important;
+}/*hover menu list options of combobox*/
+
+/* 
+ *  General Buttons
+*/
+QPushButton { /* General orange of button style*/
+    background: rgb(234,124,0);
+    border: 1px solid rgb(222,150,180);
+    color: rgb(255, 255, 255);
+    border-radius: 8px;
+    height: 30px;
+    width: 150px;
+    font-family: Arial;
+    font-style: normal;
+    font-size: 12pt;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    text-transform:uppercase;
+} 
+QPushButton:hover, QPushButton:focus {
+    background: rgb(252,251,252) !important;
+    border: 2px solid rgb(234,124,0) !important;
+    color: rgb(20, 20, 20);
+}
+QPushButton:disabled {
+    background: rgb(233, 201, 166);
+    border: 0px;
+}
+QPushButton:pressed {
+    background: rgba(250, 133, 0, 0.3) !important;
+    border: 2px solid rgb(250, 133, 0) !important;
+    color: rgb(234,124,0) !important;
+} 
+QCheckBox {
+    color: rgb(120, 127, 139);
+}
+QRadioButton {
+    color: rgb(120, 127, 139);
+}
+
+/* 
+ *  General Text controls (Input and outputs)
+*/
+QLineEdit {
+    background: rgb(255, 255, 255);
+    color: rgb(20, 20, 20);
+    border: 1px solid rgb(61, 61, 61);
+    border-radius: 8px;
+    height: 35px !important;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+} /*label*/
+
+
+#SendCoinsEntry>QValidatedLineEdit, #SendCoinsEntry>BitcoinAmountField{
+    background:white;
+    border: 0px;
+}
+
+QTextEdit {
+    background: rgb(255, 255, 255);
+    color: rgb(20, 20, 20);
+    border-radius: 8px;
+    height: 35px !important;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+} /*textbox*/
+QPlainTextEdit {
+    background: rgb(255, 255, 255);
+    color: rgb(20, 20, 20);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+} /*textarea*/
+QDoubleSpinBox {
+    background: rgb(255, 255, 255);
+    color: rgb(20, 20, 20);
+    border: 0px solid rgb(61, 61, 61);
+    border-radius: 8px;
+    height: 35px !important;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+} /*textbox with more and less button*/
+QDoubleSpinBox::up-button, QDoubleSpinBox::down-button {
+    width: 17px;
+    height: 17px;
+    border: 0px solid black;
+}
+QDoubleSpinBox::up-button {
+    image: url(:/icons/uparrow) !important;
+    border-top-left-radius:4px;
+    border-top-right-radius:4px;
+}
+QDoubleSpinBox::down-button {
+    image: url(:/icons/downarrow) !important;
+    border-bottom-left-radius:4px;
+    border-bottom-right-radius:4px;
+}
+QDoubleSpinBox::up-button:hover, QDoubleSpinBox::down-button:hover{
+    background-color:rgba(198,38,146,0.4);
+}
+/* 
+ *  General Float menu poped up on right click
+*/
+QMenuBar {
+    background: rgb(255, 255, 255);
+    color: rgb(20, 20, 20);
+}
+QMenu {
+    background: rgb(251, 251, 251);
+    color: rgb(28, 28, 28);
+}
+
+QMenu::item:selected {
+    background-color: rgb(47, 150, 214);
+}
+
+QLabel {
+    color: rgb(96, 96, 96);
+}
+
+QScrollBar {
+    color: rgb(255, 255, 255);
+}
+
+/*
+ *  General Progress Bar
+ */
+QProgressBar {
+    border: 2px solid white;
+    background-color: white;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    height: 18px ;
+
+}
+QProgressBar::chunk {
+    background-color:rgb(199,9,89);
+    border-radius: 4px;
+}
+
+/* 
+ *  Tree view drop down list like 
+ */
+QTreeView::item {
+    background: rgb(251, 251, 251);
+    color: rgb(20, 20, 20);
+} 
+
+QTreeView::item:selected {
+    background-color: rgb(234, 124, 0);
+}
+
+/* 
+ *  General Tableview: table header, sorting row, etc   border-radius:10px; 
+ */
+QTableView {
+    background: rgba(200, 200, 200, 0);
+    color: rgb(98, 98, 98);
+    border:none;/*bug fixed: linux and windows tableview border*/
+}
+QTableView::item{
+    background: white;
+    border: 1px solid rgba(20,20,20,0);
+}
+QTableView::item:selected {
+    background-color: rgb(241,121,72);
+    color: white;
+}
+QTableView::item:hover {
+    background-color:  rgba(236, 168, 141, 0.336);
+}
+/*
+ *  General Tableview headers
+ */
+QHeaderView{
+    background-color:transparent;
+    border: 0px solid rgba(0,0,0,0);
+}
+QHeaderView::section {
+    border-radius: 8px;
+    background: rgb(255,255,255);
+    color: rgb(98, 98, 98);
+    height: 25px !important;
+    border: 0px solid rgba(30,30,30,0.5);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+
+} 
+QHeaderView::section:horizontal {
+    margin-right: 3px !important;
+    margin-left: 3px !important;
+    margin-bottom: 6px !important;
+}
+QHeaderView::down-arrow{
+    image: url(:/icons/downarrow);
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    margin-bottom: 3px;
+}
+QHeaderView::up-arrow{
+    image: url(:/icons/uparrow);
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    margin-bottom: 3px;
+}
+
+/*
+ * General Calendar date picker (QCalendarWidget)
+*/
+
+/*day header row (mon,tue,wed...)*/
+QCalendarWidget QWidget {
+    color: black;
+    alternate-background-color: rgb(243, 137, 16);
+}
+/* normal days */
+QCalendarWidget QAbstractItemView:enabled
+{
+    font-size:20px;
+    color: rgb(20, 20, 20);
+    background-color: rgb(250,250,250);
+    selection-background-color: rgb(250, 133, 0);
+    selection-color: rgb(255, 255, 255);
+}
+
+/* navigation bar */
+QCalendarWidget QWidget#qt_calendar_navigationbar
+{
+    background-color: rgb(180,38,134);
+    /*background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #cccccc, stop: 1 #333333);*/
+}
+/* days of another month*/
+QCalendarWidget QAbstractItemView:disabled
+{
+    color: rgb(128,128,128);
+}
+
+
+/*QCalendarWidget QToolButton {
+    height: 30px;
+    width: 30px;
+    color: white;
+    font-size: 24px;
+    icon-size: 50px, 50px;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #cccccc, stop: 1 #333333);
+}
+QCalendarWidget QMenu {
+    width: 150px;
+    left: 20px;
+    color: white;
+    font-size: 18px;
+    background-color: rgb(100, 100, 100);
+}
+
+QCalendarWidget QSpinBox {
+    width: 150px;
+    font-size:24px;
+    color: white;
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #cccccc, stop: 1 #333333);
+    selection-background-color: rgb(136, 136, 136);
+    selection-color: rgb(255, 255, 255);
+}*/
+
+/*QCalendarWidget QSpinBox::up-button { subcontrol-origin: border; subcontrol-position: top right; width:65px; }
+QCalendarWidget QSpinBox::down-button {subcontrol-origin: border; subcontrol-position: bottom right; width:65px;}
+QCalendarWidget QSpinBox::up-arrow { width:56px; height:56px; }
+QCalendarWidget QSpinBox::down-arrow { width:56px; height:56px; }
+*/
+
+
+/* 
+ *  The container of the tableview and forms of receive, send, transactions address book pages
+ *
+QFrame{
+    padding:100px;
+    text-align: center;
+}*/
+
+
+/*
+    Overview page
+*/
+
+#widgetSpendableCard{
+   background: qlineargradient(x1:0,y1:0,x2:1,y2:1, stop: 0 #bf2287, stop: 1 #f9b35c );
+   border-radius: 12px;
+}
+
+#lblRecentTransactions{
+    color: rgb(186,1,121);
+    padding-top:20px;
+    text-transform:uppercase;
+}
+#recent_transactions{
+    background-image: url(:/images/transparent-mosaic) repeat;
+    border-radius: 12px;
+}
+#listTransactions{
+    margin-left: 30px !important;
+    margin-right: 30px !important;
+    margin-top: 10px !important;
+}
+
+#toolBar{
+    background-color:rgb(251,251,251) !important;
+    border: 0px solid black;  /* This must be present in order to take effect*/
+}
+
+/*
+    Send Coins and Address Book page
+*/
+
+QLabel[test="69"]{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight:bold;
+    margin-left:15px;
+}
+
+#lineEditCoinControlChange{
+    border: 0px;
+}
+#frameCoinControl, #scrollArea, #scrollAreaWidgetContents{
+    border: 0px !important;
+}
+#frameCoinControl{
+    background: rgba(124, 58, 135, 0.09);
+    border-radius: 8px !important;
+}
+#scrollArea, #scrollAreaWidgetContents{
+    background-color:rgba(255,255,255,0) !important;
+}
+#SendCoinsForm{
+    background-color: rgb(255,255,255);
+    border:0px solid rgb(20,20,20);
+    border-radius: 10px;
+    margin: 40px !important;
+}
+#showQRCode{
+    background-color: rgb(202,28,85);
+    border:none;
+}
+#signMessage, #verifyMessage{
+    background-color: rgb(53,128,141);
+    border:none;
+}
+#deleteButton{
+    background-color: rgb(214,9,21);
+    border:none;
+}
+#sendButton{
+    background-color: rgb(173,36,136);
+    border:none;
+}
+#showQRCode:hover, #showQRCode:focus{
+    background-color: white;
+    border: 1px solid rgb(202,28,85);
+}
+#signMessage:hover, #signMessage:focus, #verifyMessage:hover, #verifyMessage:focus {
+    background-color: white;
+    border: 1px solid rgb(53,128,141);
+}
+#deleteButton:hover , #deleteButton:focus{
+    background-color: white;
+    border: 1px solid rgb(214,9,21);
+}
+#sendButton:hover, #sendButton:focus{
+    background-color: white;
+    border: 1px solid rgb(173,36,136);
+}
+#showQRCode:pressed{
+    background-color: rgba(202, 28, 86, 0.3);
+    border:none;
+}
+#showQRCode:disabled{
+    background-color: rgba(161, 81, 108, 0.3);
+}
+#signMessage:pressed, #verifyMessage:pressed{
+    background-color: rgba(53, 128, 141, 0.3) !important;
+    border: 2px solid rgb(53, 128, 141) !important;
+    color: rgb(53, 128, 141) !important;
+}
+#signMessage:disabled, #verifyMessage:disabled{
+    background-color: rgba(65, 95, 100, 0.3) !important;
+}
+#deleteButton:pressed{
+    background-color: rgba(214, 9, 23, 0.3);
+    border: 2px solid rgb(214, 9, 23) !important;
+    color: rgb(214, 9, 23) !important;
+}
+#deleteButton:disabled{
+    background-color: rgba(160, 63, 70, 0.3);
+}
+#sendButton:pressed{
+    background-color: rgba(173, 36, 136, 0.3);
+    border: 2px solid rgb(173, 36, 136) !important;
+    color: rgb(173, 36, 136) !important;
+}
+#sendButton:disabled{
+    background-color: rgba(134, 88, 122, 0.3);
+}
+#addressBookButton, #pasteButton, #deleteEntryButton{
+    border: 0px solid transparent !important;
+    background-color:transparent !important;
+    height: 32px !important;
+    width: 32px !important;
+}
+#addressBookButton_VM, #addressBookButton_SM, #pasteButton_SM, #copySignatureButton_SM, #clearButton{
+    margin-left: 10px;
+    border: 0px solid transparent !important;
+    background-color:transparent !important;
+    width: 32px !important;
+}
+#widgetSpendableCard{
+    background: qlineargradient(x1:0,y1:0,x2:1,y2:1, stop: 0 #bf2287, stop: 1 #f9b35c );
+    border-radius: 12px;
+}
+
+/* Header tab type menus (inside popup dialogs) equivalent to NSTabView
+
+This style should only load on windows and linux versions
+QTabBar::tab {
+    color: rgb(120, 127, 139);
+    border: 1px solid rgb(20, 20, 20);
+    border-bottom: none;
+    padding: 5px;
+} 
+QTabBar::tab:selected {
+    background: rgb(41, 133, 255);
+    margin-top: 2px;
+    color: rgb(255,255,255);
+}
+
+QTabWidget::pane {
+    border: 1px solid rgba(20, 20, 20);
+    border-radius:5px;
+}
+/*Loading blockchain network bottom progress bar*/
+/*the frarme of the view where the new page will be loaded*/
+
+/*#verticalLayoutCoinControl{
+    background-color:red !important;
+}*/
