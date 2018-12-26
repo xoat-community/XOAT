@@ -24,7 +24,7 @@ packages:
 - "libpng12-dev"
 reference_datetime: "2011-01-30 00:00:00"
 remotes:
-- "url": "https://ivan_cbqa@bitbucket.org/cbqa-demo/xoat.git"
+- "url": "https://github.com/Ciip1996/XOAT.git"
   "dir": "xoat"
 files:
 - "miniupnpc-1.6.tar.gz"
