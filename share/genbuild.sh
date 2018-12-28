@@ -25,7 +25,7 @@ fi
 if [ -n "$DESC" ]; then
     NEWINFO="#define BUILD_DESC \"$DESC\""
 else
-    NEWINFO="// No build information available"
+    NEWINFO="#define BUILD_DESC \"v1.0.0.0-g-9446c7d\""
 fi
 
 # only update build.h if necessary
