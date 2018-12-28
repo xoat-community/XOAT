@@ -11,6 +11,12 @@ src/build.h
 *.o
 *.patch
 .xoat
+#mxe generated when compiled
+.qmake.stash
+Makefile.Debug
+Makefile.Release
+release/
+xoat-qt_plugin_import.cpp
 #compilation and Qt preprocessor part
 *.qm
 Makefile
