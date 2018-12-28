@@ -52,10 +52,10 @@ const std::string CLIENT_NAME("Xoatnet");
 
 #ifdef WIN32 
 #define BUILD_DESC_FROM_UNKNOWN(maj, min, rev, build) \
-    "v" DO_STRINGIZE(maj) "." DO_STRINGIZE(min) "." DO_STRINGIZE(rev) "." DO_STRINGIZE(build) "-d921e0b"
-#elif 
+    "v" DO_STRINGIZE(maj) "." DO_STRINGIZE(min) "." DO_STRINGIZE(rev) "." DO_STRINGIZE(build) "-b15dfe5"
+#else 
 #define BUILD_DESC_FROM_UNKNOWN(maj, min, rev, build) \
-    "v" DO_STRINGIZE(maj) "." DO_STRINGIZE(min) "." DO_STRINGIZE(rev) "." DO_STRINGIZE(build) "-linux-"
+    "v" DO_STRINGIZE(maj) "." DO_STRINGIZE(min) "." DO_STRINGIZE(rev) "." DO_STRINGIZE(build) "-b15dfe5-"
 #endif
 
 #ifndef BUILD_DESC
